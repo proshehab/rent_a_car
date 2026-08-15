@@ -1,0 +1,128 @@
+export const CARS = [
+  {
+    id: "eco-i10",
+    plate: "ECO-01",
+    className: "Compact",
+    name: "Hyundai i10",
+    pricePerDay: 24,
+    seats: 4,
+    transmission: "Manual",
+    fuel: "Petrol",
+    tag: "Best value",
+    rating: 4.6,
+    location: "Dhaka",
+    description:
+      "A nimble city car that's cheap to run and easy to park. The default pick for solo trips and short hops around town.",
+  },
+  {
+    id: "eco-picanto",
+    plate: "ECO-02",
+    className: "Compact",
+    name: "Kia Picanto",
+    pricePerDay: 22,
+    seats: 4,
+    transmission: "Manual",
+    fuel: "Petrol",
+    tag: "Cheapest",
+    rating: 4.4,
+    location: "Chattogram",
+    description:
+      "Small footprint, small bill. Good fuel economy and enough boot space for a couple of weekend bags.",
+  },
+  {
+    id: "suv-troc",
+    plate: "SUV-01",
+    className: "Crossover",
+    name: "VW T-Roc",
+    pricePerDay: 46,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    tag: "Most booked",
+    rating: 4.8,
+    location: "Dhaka",
+    description:
+      "Raised seating and a bigger boot without the size of a full SUV. Comfortable on longer highway drives.",
+  },
+  {
+    id: "suv-tucson",
+    plate: "SUV-02",
+    className: "Crossover",
+    name: "Hyundai Tucson",
+    pricePerDay: 52,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    tag: "Family favorite",
+    rating: 4.7,
+    location: "Sylhet",
+    description:
+      "Roomy cabin, strong safety ratings, and enough space for a family of five plus luggage.",
+  },
+  {
+    id: "ev-model3",
+    plate: "EV-01",
+    className: "Electric",
+    name: "Tesla Model 3",
+    pricePerDay: 58,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Electric",
+    tag: "Zero emissions",
+    rating: 4.9,
+    location: "Dhaka",
+    description:
+      "Instant torque, minimalist cabin, and access to the fast-charge network. Charging cable included.",
+  },
+  {
+    id: "ev-leaf",
+    plate: "EV-02",
+    className: "Electric",
+    name: "Nissan Leaf",
+    pricePerDay: 44,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Electric",
+    tag: "Efficient",
+    rating: 4.5,
+    location: "Khulna",
+    description:
+      "A practical, well-priced EV for city driving with a range that comfortably covers a day of errands.",
+  },
+  {
+    id: "lux-5series",
+    plate: "LUX-01",
+    className: "Executive",
+    name: "BMW 5 Series",
+    pricePerDay: 89,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    tag: "Premium",
+    rating: 4.9,
+    location: "Dhaka",
+    description:
+      "Business-class comfort for client pickups or long drives. Leather interior, adaptive cruise, and a quiet cabin.",
+  },
+  {
+    id: "lux-a6",
+    plate: "LUX-02",
+    className: "Executive",
+    name: "Audi A6",
+    pricePerDay: 92,
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    tag: "Premium",
+    rating: 4.8,
+    location: "Rajshahi",
+    description:
+      "Understated exterior, high-end cabin tech. A reliable choice for airport transfers and formal occasions.",
+  },
+];
+
+export const CLASSES = ["All", "Compact", "Crossover", "Electric", "Executive"];
+
+export function getCarById(id) {
+  return CARS.find((c) => c.id === id);
+}

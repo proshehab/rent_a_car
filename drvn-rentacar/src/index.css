@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-ink font-body antialiased;
+}
+
+/* Signature dashed "route line" divider */
+.route-line {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    to right,
+    theme("colors.line") 0px,
+    theme("colors.line") 18px,
+    transparent 18px,
+    transparent 34px
+  );
+}
+
+.plate {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.12em;
+}
+
+.card {
+  @apply bg-surface border border-line transition-transform duration-200;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 183, 0, 0.4);
+}
+
+.input {
+  @apply w-full rounded-lg border border-line bg-surface2 px-3 py-3 text-sm text-ink placeholder:text-inkDim outline-none focus:border-amber;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-amber px-5 py-3 text-sm font-semibold text-bg transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-line bg-surface2 px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-amber/40;
+}
+
+.label {
+  @apply mb-1.5 block text-xs font-medium text-inkDim;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: theme("colors.line");
+  border-radius: 999px;
+}
